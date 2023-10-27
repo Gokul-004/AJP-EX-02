@@ -1,0 +1,102 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+       
+    <title>Document</title>
+  </head>
+  <bodys>
+    <div class="container">
+    <form th:action="@{/user_save}" th:method="post" th:object="${user}">
+      <div>Name</div>
+
+      <input type="hidden" th:field="*{id}" />
+      <input type="text" th:field="*{name}" class="form-control"/>
+
+      <div >Age</div>
+      <input type="number" th:field="*{age} " class="form-control"/><br/>
+
+      <input type="submit" value="Add User" />
+    </div>
+    </form>
+  </body>
+</html>
+<html lang="en">
+    <head>
+        <title>Registration Form</title>
+        
+        <style>
+            h{
+                color: rgb(214, 236, 17);
+                font-size: 15pt;
+            }
+            body{
+              background-image: linear-gradient(to right, black , green,yellow)
+            }
+            hx{
+              color: aliceblue;
+            }
+        </style>
+    </head>
+    <body ><center>
+        <form th:action="@{/user_save}"  method="post" th:object="${user}">
+      <input type="hidden" th:field="*{id}" />
+
+            <h><h1>Register Form</h1><br>
+     Name<br><input type="text" th:field="*{name}"/><br><br>
+        Email<br><input type="email" th:field="*{email}"/><br><br>
+        Password<br><input type="password" th:field="*{Password}"/><br><br>
+        DOB <br><input type="date" th:field="*{DOB}"/><br><br>
+        Gender <br><input type="radio" id="male"  name="Gender" value="male"  th:field="*{Gender}">Male
+      <input type="radio" id="Female"  name="Gender" value="Female" th:field="*{Gender}">Female
+         <br><br>
+         Mobiles: <br><br>
+         <input type="checkbox" id="oppo" name="Mobiles" value="oppo" th:field="*{Mobiles}">
+         <label for="oppo">OPPO</label><br>
+         <input type="checkbox" id="vivo" name="Mobiles" value="vivo" th:field="*{Mobiles}">
+         <label for="vivo">VIVO</label><br>
+         <input type="checkbox" id="Samsung" name="Mobiles" value="Samsung" th:field="*{Mobiles}">
+         <label for="Samsung">SAMSUNG</label><br>
+         <input type="checkbox" id="apple" name="apple" value="apple" th:field="*{Mobiles}">
+         <label for="apple">Apple</label><br>
+         <input type="checkbox" id="oneplus" name="oneplus" value="oneplus" th:field="*{Mobiles}">
+         <label for="oneplus">ONEPLUS</label><br><br>
+         Feedback: <br>
+         <textarea  th:field="*{note}" cols="30" rows="10"></textarea><br>
+         <br><button type="submit">Add User</button></h> 
+         <br>
+         </form></center>
+     </body>
+ </html>-->
+ <html lang="en">
+    <head>
+        <title>Registration Form</title>
+    </head>
+    <body ><center>
+        <form th:action="@{/user_save}"  method="post" th:object="${user}">
+      <input type="hidden" th:field="*{id}" />
+
+            <h><h1>Movie ticket booking Form</h1><br>
+     Name<br><input type="text" th:field="*{name}"/><br><br>
+        Email<br><input type="email" th:field="*{email}"/><br><br>
+        Password<br><input type="password" th:field="*{Password}"/><br><br>
+        DOB <br><input type="date" th:field="*{DOB}"/><br><br>
+        Movie <br><input type="radio" id="jailer"  name="movie" value="jailer"  th:field="*{movie}">Male
+      <input type="radio" id="kushi"  name="movie" value="kushi" th:field="*{movie}">Female
+         <br><br>
+         Show timming: <br><br>
+         <input type="checkbox" id="7pm" name="show" value="7pm" th:field="*{show}">
+         <label for="oppo">7pm</label><br>
+         <input type="checkbox" id="10pm" name="show" value="10pm" th:field="*{show}">
+         <label for="vivo">10pm</label><br>
+         Seat number: <br>
+         <input type="number" th:field="*{seat}"><br>
+         <br><button type="submit">Add User</button></h> 
+         <br>
+         </form></center>
+     </body>
+ </html>

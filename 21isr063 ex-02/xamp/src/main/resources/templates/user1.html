@@ -1,0 +1,74 @@
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Home</title>
+       <style>
+        body{
+            background-image: url(addi.webp);
+            background-size: cover;
+        }
+        a{
+          text-decoration: none;
+          color: blue;
+          font-size: xx-large;
+        }
+        .container{
+          background-color: aliceblue;
+        }
+       </style>
+  </head>
+ <body><center>
+    <div >
+     <button> <a th:href="@{/add_user}">Add New User</a></button>
+    </div>
+     <div>
+      <section th:each="user:${users}" class="container">
+        <h1>User Id:[[${user.id}]]</h1>
+        <h1>Name:[[${user.name}]]</h1>
+        <h1>Email:[[${user.email}]]</h1>
+        <h1>Password:[[${user.Password}]]</h1>
+        <h1>DOB:[[${user.DOB}]]</h1>
+        <h1>Gender:[[${user.Gender}]]</h1>
+        <h1>Mobiles prefered:[[${user.Mobiles}]]</h1>
+        <h1>Feedback:[[${user.note}]]</h1>
+      
+       <button> <a th:href="@{'delete/user'+ ${user.id}}">Delete User</a></button>
+        <button><a th:href="@{'update/user'+ ${user.id}}">Update User</a></button>
+      </section>
+    </center>
+    </div>
+  </body>
+</html>-->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Home</title>
+  </head>
+ <body><center>
+    <div >
+     <button> <a th:href="@{/add_user}">Add New User</a></button>
+    </div>
+     <div>
+      <section th:each="user:${users}" class="container">
+        <h1>User Id:[[${user.id}]]</h1>
+        <h1>Name:[[${user.name}]]</h1>
+        <h1>Email:[[${user.email}]]</h1>
+        <h1>Password:[[${user.Password}]]</h1>
+        <h1>DOB:[[${user.DOB}]]</h1>
+        <h1>Movie:[[${user.movie}]]</h1>
+        <h1>show timming:[[${user.show}]]</h1>
+        <h1>seats:[[${user.seat}]]</h1>
+      
+       <button> <a th:href="@{'delete/user'+ ${user.id}}">Delete User</a></button>
+        <button><a th:href="@{'update/user'+ ${user.id}}">Update User</a></button>
+      </section>
+    </center>
+    </div>
+  </body>
+</html>
